@@ -10,7 +10,7 @@ will have to update.
 
 For the Semaphore Program, run these commands:
 
-$ gcc Semaphore_Example.c -o Sem_Example -lpthread
+$ gcc Semaphore_Example.c -o Sem_Example
 $ ./Sem_Example
 
 The program will go on forever, use CTRL+C to end it.
