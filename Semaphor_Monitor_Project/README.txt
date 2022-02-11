@@ -5,4 +5,6 @@ $ ./ Sem_Example
 
 ---------------------------------------------------------
 
-For the Monitor part, run these commands:
+For the Monitor part, it is not to be run, exactly.
+As it is a conceptual program, it's better to just look 
+at it rather than run it.
