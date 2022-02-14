@@ -15,7 +15,7 @@ $ ./Sem_Example
 
 The program will go on forever, use CTRL+C to end it.
 
-If the program does not compile, use the Sem_Code.txt file to 
+If the program does not compile, use the Semaphore_Code.txt file to 
 create a .c file and run that, if you can.
 
 ---------------------------------------------------------
