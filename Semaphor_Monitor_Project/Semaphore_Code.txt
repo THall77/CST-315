@@ -1,0 +1,58 @@
+/*
+Tyler Allen Hall
+CST-315
+Ricardo Citro
+Feb 10, 2022
+The purpose of this program is to
+provide an example of how Semaphores work.
+*/
+
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+#include <time.h>
+
+
+int main(){
+  // Coutning Semaphore, set to a random int bewteen 1 and 10.
+  int sem;
+
+  srand(time(0));
+
+  sem = rand() % 10 + 1;
+  
+  /*
+  This loop goes on forever. What happens is that each call
+  simulated a thread, outputting what the producer made, which 
+  will be a random int, as long as the
+  counting semaphore is above 0.
+  If it is 0, a message displays simulating the wait() system call
+  and the value of sem is set to a random number again,
+  allowing the producer to make more ints for the consumer to 
+  consume.
+  */
+  while(1){
+
+    if(sem > 0){
+
+      printf("Producer made: %d\n", rand() % 100);
+      sem--;
+      sleep(1);
+
+    } else {
+
+      printf("Waiting for ints to consume...\n");
+      sem += rand() % 10 + 1;
+      sleep(1);
+
+    }
+
+
+  }
+
+
+
+  return 0;  
+}
